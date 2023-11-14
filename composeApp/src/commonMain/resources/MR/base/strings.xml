@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+    <string name="app_name">Osebni hišni asistent</string>
+    <string name="google_login">Google prijava</string>
+    <string name="login">Prijava</string>
+    <string name="email">Email</string>
+    <string name="password">Geslo</string>
+</resources>
