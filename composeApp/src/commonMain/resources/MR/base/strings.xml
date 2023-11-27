@@ -5,4 +5,12 @@
     <string name="login">Prijava</string>
     <string name="email">Email</string>
     <string name="password">Geslo</string>
+    <string name="invalid_email">Neveljaven email</string>
+    <string name="empty_password">Geslo ne sme biti prazno</string>
+    <string name="un_sufficient_password_length">Geslo mora biti dolgo vsaj 6 znakov</string>
+    <string name="error">Napaka</string>
+    <string name="wrong_credentials_message">Prijava z napačnim geslom ali emailom.</string>
+    <string name="close">Zapri</string>
+    <string name="no_account_yet">Še nimaš računa? </string>
+    <string name="create_account">Ustvari račun</string>
 </resources>

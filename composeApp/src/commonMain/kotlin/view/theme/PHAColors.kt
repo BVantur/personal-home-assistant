@@ -14,7 +14,7 @@ object PHAColors {
     private val BurntSienna = Color(0xFFF0635A)
     private val White = Color(0xFFFFFFFF)
     private val Iron = Color(0xFFE7E7E9)
-    private val Ebony = Color(0xFF120D26)
+    val Ebony = Color(0xFF120D26)
     val Charade = Color(0xFF2D2D3A)
 
     fun lightColors(

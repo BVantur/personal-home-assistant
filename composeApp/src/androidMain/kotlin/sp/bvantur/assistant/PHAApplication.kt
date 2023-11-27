@@ -1,8 +1,11 @@
 package sp.bvantur.assistant
 
 import android.app.Application
+import android.util.Log
+import com.google.firebase.FirebaseApp
 import di.appModule
 import org.koin.core.context.startKoin
+import java.lang.Exception
 
 class PHAApplication : Application() {
 
@@ -15,6 +18,12 @@ class PHAApplication : Application() {
         super.onCreate()
         startKoin {
             modules(internalModules.toList())
+        }
+
+        try {
+            FirebaseApp.initializeApp(this)
+        } catch (exc: Exception) {
+            Log.e("", "${exc.message}")
         }
     }
 }

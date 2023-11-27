@@ -4,6 +4,11 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.SpanStyle
+import androidx.compose.ui.text.buildAnnotatedString
+import androidx.compose.ui.text.style.TextDecoration
+import androidx.compose.ui.text.withStyle
 
 @Composable
 fun H1Text(
@@ -104,11 +109,13 @@ fun Body1Text(
 @Composable
 fun Body2Text(
     text: String,
+    color: Color = Color.Unspecified,
     modifier: Modifier = Modifier
 ) {
     Text(
         modifier = modifier,
         text = text,
+        color = color,
         style = MaterialTheme.typography.body2
     )
 }
@@ -123,4 +130,21 @@ fun ButtonText(
         text = text,
         style = MaterialTheme.typography.button
     )
+}
+
+@Composable
+fun SpannableText() {
+    val annotatedString = buildAnnotatedString {
+        append("Še nimaš računa? ")
+        withStyle(
+            style = SpanStyle(
+                color = MaterialTheme.colors.primary,
+                textDecoration = TextDecoration.Underline
+            )
+        ) {
+            append(" Registriraj se")
+        }
+    }
+
+    Text(text = annotatedString)
 }

@@ -7,7 +7,7 @@ plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsCompose)
     id("dev.icerock.mobile.multiplatform-resources")
-    id("com.google.gms.google-services") version "4.4.0"
+    id("com.google.gms.google-services")
 }
 
 kotlin {
@@ -31,7 +31,7 @@ kotlin {
     ).forEach { iosTarget ->
         iosTarget.binaries.framework {
             baseName = "ComposeApp"
-            isStatic = false
+            isStatic = true
             // TODO if changing static to true add below code as Run Script Phase in xCode
 //            "$SRCROOT/../gradlew" -p "$SRCROOT/../" :composeApp:copyFrameworkResourcesToApp \
 //            -Pmoko.resources.PLATFORM_NAME="$PLATFORM_NAME" \
@@ -52,7 +52,7 @@ kotlin {
                 implementation(libs.compose.ui)
                 implementation(libs.compose.ui.tooling.preview)
                 implementation(libs.androidx.activity.compose)
-                implementation(project.dependencies.platform("com.google.firebase:firebase-bom:32.5.0"))
+                implementation(project.dependencies.platform("com.google.firebase:firebase-bom:32.6.0"))
             }
         }
         val desktopMain by getting {

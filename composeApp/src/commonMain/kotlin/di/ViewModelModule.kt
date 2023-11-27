@@ -6,6 +6,6 @@ import view.screens.login.LoginViewModel
 
 val viewModelModule = module {
     factory { (navigator: Navigator) ->
-        LoginViewModel(navigator, get(), get())
+        LoginViewModel(navigator, get(), get(), get(), get())
     }
 }
